@@ -24,6 +24,14 @@ export default function Home({recipes}) {
   console.log(recipes)
   return (
     <div className="recipe-list">
+    {/* {
+      recipes.map((item)=>(
+        <div key={item.sys.id}>
+        {item.fields.title}
+
+        </div>
+      ))
+    } */}
       {recipes.map(recipe => (
         <RecipeCard key={recipe.sys.id} recipe={recipe} />
       ))}

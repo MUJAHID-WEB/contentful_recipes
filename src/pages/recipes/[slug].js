@@ -58,6 +58,7 @@ export default function RecipeDetails({ recipe }) {
           src={'https:' + featuredImage.fields.file.url}
           width={featuredImage.fields.file.details.image.width}
           height={featuredImage.fields.file.details.image.height}
+          alt=''
         />
         <h2>{ title }</h2>
       </div>
@@ -66,7 +67,7 @@ export default function RecipeDetails({ recipe }) {
         <p>Takes about { cookingTime } mins to cook.</p>
         <h3>Ingredients:</h3>
 
-        {ingredients.map(ing => (
+        {ingredients?.map(ing => (
           <span key={ing}>{ ing }</span>
         ))}
       </div>
